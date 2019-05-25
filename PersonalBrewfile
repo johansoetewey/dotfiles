@@ -1,0 +1,4 @@
+cask "backblaze"
+cask "cleanmymac"
+cask "musicbrainz-picard"
+cask "splice"
