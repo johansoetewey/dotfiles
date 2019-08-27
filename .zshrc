@@ -122,15 +122,15 @@ alias python='python3'
 alias k='kubectl'
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
+alias fp-build="~/Git/fp-build/fp-build-nix"
+alias docker-clean="docker image prune -f && docker container prune -f"
 
 # Add Directories to PATH
-export PATH="$PATH:$HOME/bin:$HOME/.rvm/bin:/usr/local/opt/ncurses/bin"
+export PATH="$PATH:$HOME/bin:$HOME/.rvm/bin:/usr/local/opt/ncurses/bin:/usr/local/sbin"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
-
-
 
 source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
