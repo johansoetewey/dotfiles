@@ -124,7 +124,6 @@ alias ohmyzsh="code ~/.oh-my-zsh"
 alias fp-build="~/Git/fp-build/fp-build-nix"
 alias docker-clean="docker image prune -f && docker container prune -f"
 alias git-clean="git branch --merged | egrep -v '(^\*|master|develop|stable)' | xargs git branch -d"
-alias git-clean-hard="git fetch -p && for branch in `git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}'`; do git branch -D $branch; done"
 alias ls='ls -G -F'
 alias wget='wget -c'
 alias top='htop'
