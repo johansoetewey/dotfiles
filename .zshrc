@@ -77,7 +77,7 @@ DEFAULT_USER="jsoetewey"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -88,7 +88,7 @@ DEFAULT_USER="jsoetewey"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  sudo git history zsh-autosuggestions docker jira pip python django git-flow osx zsh-syntax-highlighting
+  sudo git history zsh-autosuggestions docker jira osx zsh-syntax-highlighting pip python django
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -119,11 +119,15 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 # Aliases
 alias python='python3'
-alias k='kubectl'
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
 alias fp-build="~/Git/fp-build/fp-build-nix"
 alias docker-clean="docker image prune -f && docker container prune -f"
+alias git-clean="git branch --merged | egrep -v '(^\*|master|develop|stable)' | xargs git branch -d"
+alias git-clean-hard="git fetch -p && for branch in `git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}'`; do git branch -D $branch; done"
+alias ls='ls -G -F'
+alias wget='wget -c'
+alias top='htop'
 
 # Add Directories to PATH
 export PATH="$PATH:$HOME/bin:$HOME/.rvm/bin:/usr/local/opt/ncurses/bin:/usr/local/sbin"
@@ -134,3 +138,6 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
 source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
+
+# Variables
+JIRA_URL="https://jira.flowpilots.com"

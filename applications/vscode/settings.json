@@ -1,14 +1,6 @@
 {
     "git.autofetch": true,
-    "python.pythonPath": "/usr/bin/python",
-    "todo-tree.defaultHighlight": {
-        "foreground": "green",
-        "type": "none"
-    },
-    "todo-tree.customHighlight": {
-        "TODO": {},
-        "FIXME": {}
-    },
+    "python.pythonPath": "/usr/local/bin/python3",
     "files.autoSave": "afterDelay",
     "workbench.sideBar.location": "left",
     "workbench.statusBar.feedback.visible": false,
@@ -106,5 +98,25 @@
     "vssolution.createTemplateFolderQuestion": false,
     "vssolution.trackActiveItem": true,
     "showGitMetrics": true,
-    "spotify.showMuteUnmuteVolumeButton": false
+    "spotify.showMuteUnmuteVolumeButton": false,
+    "todo-tree.highlights.enabled": true,
+    "yaml.schemas": {
+        "file:///Users/jsoetewey/.vscode/extensions/atlassian.atlascode-2.2.0/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "atlascode.jira.jqlList": [
+        {
+            "id": "fd12e270-36ca-4303-b13c-8049a8011959",
+            "enabled": true,
+            "name": "My jira.flowpilots.com Issues",
+            "query": "assignee = currentUser() ORDER BY lastViewed DESC ",
+            "siteId": "jira.flowpilots.com",
+            "monitor": true
+        }
+    ],
+    "atlascode.jira.enabled": true,
+    "atlascode.bitbucket.enabled": true,
+    "atlascode.bitbucket.statusbar.showUser": false,
+    "atlascode.bitbucket.statusbar.showProduct": false,
+    "atlascode.bitbucket.statusbar.enabled": false,
+    "atlascode.jira.statusbar.enabled": false,
 }
