@@ -127,6 +127,7 @@ alias git-clean="git branch --merged | egrep -v '(^\*|master|develop|stable)' | 
 alias ls='ls -G -F'
 alias wget='wget -c'
 alias top='htop'
+alias cat='bat'
 
 # Add Directories to PATH
 export PATH="$PATH:$HOME/bin:$HOME/.rvm/bin:/usr/local/opt/ncurses/bin:/usr/local/sbin"
