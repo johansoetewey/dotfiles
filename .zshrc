@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -12,50 +19,6 @@ ZSH_THEME="mh"
 
 # Uncomment the following line to disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
-
-## Powerlevel9k Settings
-POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_HISTORY_BACKGROUND='white'
-
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=4
-
-POWERLEVEL9K_PROMPT_ON_NEWLINE=false
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
-
-POWERLEVEL9K_KUBECONTEXT_FOREGROUND='white'
-POWERLEVEL9K_KUBECONTEXT_BACKGROUND='none'
-
-POWERLEVEL9K_IP_INTERFACE='eth0'
-
-POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND='none'
-POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_VISUAL_IDENTIFIER_COLOR='003'
-POWERLEVEL9K_DIR_HOME_BACKGROUND='none'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='none'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='none'
-POWERLEVEL9K_DIR_ETC_BACKGROUND='none'
-POWERLEVEL9K_DIR_HOME_FOREGROUND='white'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='white'
-POWERLEVEL9K_DIR_ETC_FOREGROUND='white'
-POWERLEVEL9K_STATUS_OK_BACKGROUND='none'
-POWERLEVEL9K_STATUS_ERROR_BACKGROUND='none'
-POWERLEVEL9K_FOLDER_ICON=''
-POWERLEVEL9K_ETC_ICON=''
-POWERLEVEL9K_HOME_ICON=''
-POWERLEVEL9K_HOME_SUB_ICON=''
-POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
-POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='none'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='none'
-POWERLEVEL9K_VCS_CLOBBERED_BACKGROUND='none'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='none'
-POWERLEVEL9K_VCS_CLEAN_FOREGROUND='green'
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='yellow'
-POWERLEVEL9K_VCS_CLOBBERED_FOREGROUND='red'
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='green'
 
 # Default username to hide "user@hostname" info
 DEFAULT_USER="jsoetewey"
@@ -77,7 +40,7 @@ DEFAULT_USER="jsoetewey"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="dd/mm/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -141,10 +104,13 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
-source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
+source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # Variables
 JIRA_URL="https://jira.flowpilots.com"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
