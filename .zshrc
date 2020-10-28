@@ -119,15 +119,19 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 # Aliases
 alias python='python3'
-alias zshconfig="code ~/.zshrc"
-alias ohmyzsh="code ~/.oh-my-zsh"
-alias fp-build="~/Git/fp-build/fp-build-nix"
+alias zshconfig="code $HOME/.zshrc"
+alias ohmyzsh="code $HOME/.oh-my-zsh"
+alias fp-build="$HOME/Git/fp-build/fp-build-nix"
 alias docker-clean="docker image prune -f && docker container prune -f"
 alias git-clean="git branch --merged | egrep -v '(^\*|master|develop|stable)' | xargs git branch -d"
 alias ls='ls -G -F'
 alias wget='wget -c'
 alias top='htop'
 alias cat='bat'
+alias c="clear"
+alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
+alias grep='grep --color=auto'
+alias brewski='brew update && brew upgrade && brew cask upgrade && brew cleanup; brew doctor'
 
 # Add Directories to PATH
 export PATH="$PATH:$HOME/bin:$HOME/.rvm/bin:/usr/local/opt/ncurses/bin:/usr/local/sbin"
@@ -141,3 +145,6 @@ source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 
 # Variables
 JIRA_URL="https://jira.flowpilots.com"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
