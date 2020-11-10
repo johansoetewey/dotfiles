@@ -95,6 +95,12 @@ alias c="clear"
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias grep='grep --color=auto'
 alias brewski='brew update && brew upgrade && brew cask upgrade && brew cleanup; brew doctor'
+alias countryroads='cd ~'
+
+cheat() {
+  # Ask cheat.sh website for details about a Linux command.
+  curl -m 10 "http://cheat.sh/${1}" 2>/dev/null || printf '%s\n' "[ERROR] Something broke"
+}
 
 # Add Directories to PATH
 export PATH="$PATH:$HOME/bin:$HOME/.rvm/bin:/usr/local/opt/ncurses/bin:/usr/local/sbin"
