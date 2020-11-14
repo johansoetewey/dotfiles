@@ -100,7 +100,7 @@
     "spotify.showMuteUnmuteVolumeButton": false,
     "todo-tree.highlights.enabled": true,
     "yaml.schemas": {
-        "file:///Users/jsoetewey/.vscode/extensions/atlassian.atlascode-2.8.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///Users/jsoetewey/.vscode/extensions/atlassian.atlascode-2.8.4/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "atlascode.jira.jqlList": [
         {
