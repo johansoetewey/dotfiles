@@ -5,7 +5,7 @@
         "revision": "a8aa5445de31d655508a52223ed20e6c09e121a2"
       },
       "homebrew/cask": {
-        "revision": "18509bc5a6ca1198d7d5040b0bba56bf85f68fba"
+        "revision": "7395cd60d8a67b65f5bde1f7713048560111d410"
       },
       "homebrew/cask-drivers": {
         "revision": "d436b61beccff8ebb4926bf1ccc74d82df145afb"
@@ -14,7 +14,7 @@
         "revision": "509de02d7003a9ee0ab6814aeba38a270bc2df47"
       },
       "homebrew/core": {
-        "revision": "844368979c9cf8acf7e48d58e6a7bc062942e6bb"
+        "revision": "f84f8e333cb91708b039c86b99d0840cd7398ed9"
       },
       "homebrew/services": {
         "revision": "f6313045d710df06b1e40597f5820026486a55ee"
@@ -93,6 +93,10 @@
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/bat-0.16.0.big_sur.bottle.1.tar.gz",
+              "sha256": "6f581a2481e58669cd3fe742a6d35f361e45d2110fe29fbd5bc4fdf982427ca7"
+            },
             "catalina": {
               "url": "https://homebrew.bintray.com/bottles/bat-0.16.0.catalina.bottle.1.tar.gz",
               "sha256": "4bd522806fe7f6908245788ea041cf0eae32d012c883e57ad1ab137ca7d34fda"
@@ -114,6 +118,10 @@
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/docker-19.03.13.big_sur.bottle.tar.gz",
+              "sha256": "598faffd6ba103a28d421c7a004c53d3422901bf475d71b1adb2e6c144766cbc"
+            },
             "catalina": {
               "url": "https://homebrew.bintray.com/bottles/docker-19.03.13.catalina.bottle.tar.gz",
               "sha256": "d71d12ae8813da24871221cdabba7d01a0a2f8af298e4eef5406a29a2af67482"
@@ -135,6 +143,10 @@
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/ffmpeg-4.3.1_4.big_sur.bottle.tar.gz",
+              "sha256": "32d496fe08e4bd5e8b5589d92cc7c6b9e6abb29a3d05f092760eabba81e98a45"
+            },
             "catalina": {
               "url": "https://homebrew.bintray.com/bottles/ffmpeg-4.3.1_4.catalina.bottle.tar.gz",
               "sha256": "fa20f49d1650469cc4ea6fe6ef6c8d949106235cec8de9a386dec5839c2bb047"
@@ -156,6 +168,10 @@
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/fselect-0.7.1.big_sur.bottle.tar.gz",
+              "sha256": "a59d8f537da54a5b7830e48eb42b1911973820a5a86555d76e4a9760d79f9684"
+            },
             "catalina": {
               "url": "https://homebrew.bintray.com/bottles/fselect-0.7.1.catalina.bottle.tar.gz",
               "sha256": "7da995ae54157a3ecdaa8d5799a1a6b2356c6e8cf3ba2291ba29502c1d422053"
@@ -223,6 +239,10 @@
           "cellar": ":any",
           "prefix": "/usr/local",
           "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/htop-3.0.2.big_sur.bottle.tar.gz",
+              "sha256": "059d986c7148b98f3fceea5944d9cfa799dd9bc5e43b4d0daed4bb1f9a756ebf"
+            },
             "catalina": {
               "url": "https://homebrew.bintray.com/bottles/htop-3.0.2.catalina.bottle.tar.gz",
               "sha256": "5bfd853dd4f051eb9a53c85ccdf21f66691f1a839036f5cff6c20a1f0ab05967"
@@ -244,6 +264,10 @@
           "cellar": ":any",
           "prefix": "/usr/local",
           "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/mas-1.7.1.big_sur.bottle.tar.gz",
+              "sha256": "432091a534d0a1f753fcf953fb1c20c10ef5762b7f8922cb378c3dcd36898d30"
+            },
             "catalina": {
               "url": "https://homebrew.bintray.com/bottles/mas-1.7.1.catalina.bottle.tar.gz",
               "sha256": "e6de2f98ebd21885a9827664fe1b7eea5516a7fd75d5b7383e3a9b088591a27f"
@@ -465,6 +489,10 @@
           "cellar": ":any",
           "prefix": "/usr/local",
           "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/tmux-3.1c_1.big_sur.bottle.tar.gz",
+              "sha256": "6f9b667c08719ca7a164c571740d510236d55c922058b1d71fb38f66163a394e"
+            },
             "catalina": {
               "url": "https://homebrew.bintray.com/bottles/tmux-3.1c_1.catalina.bottle.tar.gz",
               "sha256": "e1148f3043ef1e77e942bc654e6b3867f40401b0ba93e6d44a460467c51e0a3b"
@@ -486,6 +514,10 @@
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/tree-1.8.0.big_sur.bottle.tar.gz",
+              "sha256": "572adeaba1ffee7fa8bcad414c8b18140c367bbc81dc2ab8fd438cbd7e4a985b"
+            },
             "catalina": {
               "url": "https://homebrew.bintray.com/bottles/tree-1.8.0.catalina.bottle.tar.gz",
               "sha256": "18f7984bdbab22251e9fc3c7832dbace5c7f7a77e8d63717bb0078385e2bf255"
@@ -536,6 +568,10 @@
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/zsh-5.8.big_sur.bottle.tar.gz",
+              "sha256": "9f26059745a6396e9f6ed641e10fb7eed6659c1a225d0756a58a82f524fbd71d"
+            },
             "catalina": {
               "url": "https://homebrew.bintray.com/bottles/zsh-5.8.catalina.bottle.tar.gz",
               "sha256": "209d04a4d62f6162f1b6cf824d2c50b00b52cb812c04c1967e5b376573b5aef0"
@@ -643,7 +679,7 @@
         }
       },
       "balenaetcher": {
-        "version": "1.5.106",
+        "version": "1.5.110",
         "options": {
           "full_name": "balenaetcher"
         }
@@ -655,7 +691,7 @@
         }
       },
       "docker": {
-        "version": "2.2.0.0,42247",
+        "version": "2.0.0.3-ce-mac81,31259",
         "options": {
           "full_name": "docker"
         }
@@ -673,7 +709,7 @@
         }
       },
       "google-chrome": {
-        "version": "77.0.3865.120",
+        "version": "78.0.3904.97",
         "options": {
           "full_name": "google-chrome"
         }
@@ -685,13 +721,13 @@
         }
       },
       "handbrake": {
-        "version": "1.2.2",
+        "version": "1.3.3",
         "options": {
           "full_name": "handbrake"
         }
       },
       "insomnia": {
-        "version": "7.1.1",
+        "version": "2020.4.2",
         "options": {
           "full_name": "insomnia"
         }
@@ -715,7 +751,7 @@
         }
       },
       "microsoft-teams": {
-        "version": "1.2.00.13765",
+        "version": "1.3.00.28778",
         "options": {
           "full_name": "microsoft-teams"
         }
@@ -733,7 +769,7 @@
         }
       },
       "parallels": {
-        "version": "15.1.0-47107",
+        "version": "16.1.0-48950",
         "options": {
           "full_name": "parallels"
         }
@@ -751,7 +787,7 @@
         }
       },
       "postman": {
-        "version": "7.0.9",
+        "version": "7.34.0",
         "options": {
           "full_name": "postman"
         }
@@ -787,19 +823,19 @@
         }
       },
       "steamcmd": {
-        "version": null,
+        "version": "latest",
         "options": {
           "full_name": "steamcmd"
         }
       },
       "teamviewer": {
-        "version": "15.8.3",
+        "version": "15.11.6",
         "options": {
           "full_name": "teamviewer"
         }
       },
       "thunderbird": {
-        "version": "60.8.0",
+        "version": "78.4.3",
         "options": {
           "full_name": "thunderbird"
         }
@@ -823,7 +859,7 @@
         }
       },
       "visual-studio-code": {
-        "version": "1.32.3,a3db5be9b5c6ba46bb7555ec5d60178ecc2eaae4",
+        "version": "1.33.0,0dd516dd412d42323fc3464531b1c715d51c4c1a",
         "options": {
           "full_name": "visual-studio-code"
         }
@@ -835,7 +871,7 @@
         }
       },
       "wireshark": {
-        "version": "3.0.7",
+        "version": "3.4.0",
         "options": {
           "full_name": "wireshark"
         }
@@ -853,9 +889,57 @@
         }
       },
       "obs": {
-        "version": "26.0.2",
+        "version": "25.0.8",
         "options": {
           "full_name": "obs"
+        }
+      },
+      "robo-3t": {
+        "version": "1.4.2,8650949",
+        "options": {
+          "full_name": "robo-3t"
+        }
+      },
+      "backblaze": {
+        "version": "7.0.1.444",
+        "options": {
+          "full_name": "backblaze"
+        }
+      },
+      "cleanmymac": {
+        "version": "4.6.1,1585244862",
+        "options": {
+          "full_name": "cleanmymac"
+        }
+      },
+      "musicbrainz-picard": {
+        "version": "2.5.1",
+        "options": {
+          "full_name": "musicbrainz-picard"
+        }
+      },
+      "splice": {
+        "version": "3.6.5",
+        "options": {
+          "full_name": "splice"
+        }
+      },
+      "goodsync": {
+        "version": "11.4.4.4",
+        "options": {
+          "full_name": "goodsync"
+        }
+      },
+      "transmission": {
+        "version": "3.00",
+        "options": {
+          "full_name": "transmission"
+        }
+      },
+      "dbeaver-community": {
+        "version": "7.2.4",
+        "options": {
+          "full_name": "dbeaver-community"
         }
       }
     },
@@ -866,7 +950,7 @@
       },
       "Adblock Plus": {
         "id": "1432731683",
-        "version": "2.1.4"
+        "version": "2.1.5"
       },
       "Brother iPrint&Scan": {
         "id": "1193539993",
@@ -886,7 +970,7 @@
       },
       "GarageBand": {
         "id": "682658836",
-        "version": "10.4.1"
+        "version": "10.3.5"
       },
       "iMovie": {
         "id": "408981434",
@@ -906,11 +990,11 @@
       },
       "Microsoft Excel": {
         "id": "462058435",
-        "version": "16.43.1"
+        "version": "16.42"
       },
       "Microsoft PowerPoint": {
         "id": "462062816",
-        "version": "16.43"
+        "version": "16.42"
       },
       "Microsoft Remote Desktop": {
         "id": "1295203466",
@@ -918,7 +1002,7 @@
       },
       "Microsoft Word": {
         "id": "462054704",
-        "version": "16.43"
+        "version": "16.42"
       },
       "Numbers": {
         "id": "409203825",
@@ -955,6 +1039,26 @@
       "Xcode": {
         "id": "497799835",
         "version": "12.2"
+      },
+      "djay Pro": {
+        "id": "1302002064",
+        "version": "2.2.8"
+      },
+      "Pocket": {
+        "id": "568494494",
+        "version": "1.8.5"
+      },
+      "The Unarchiver": {
+        "id": "425424353",
+        "version": "4.2.2"
+      },
+      "DaVinci Resolve": {
+        "id": "571213070",
+        "version": "16.2.7"
+      },
+      "Mimeo Photos": {
+        "id": "1282504627",
+        "version": "4.2.3"
       }
     }
   },
@@ -967,6 +1071,14 @@
         "CLT": "12.2.0.0.1.1604076827",
         "Xcode": "12.2",
         "macOS": "11.0.1"
+      },
+      "catalina": {
+        "HOMEBREW_VERSION": "2.5.10",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "f84f8e333cb91708b039c86b99d0840cd7398ed9",
+        "CLT": "12.0.32.21",
+        "Xcode": "12.0",
+        "macOS": "10.15.7"
       }
     }
   }

@@ -68,7 +68,7 @@ cask "iterm2"
 cask "keycastr"
 cask "microsoft-azure-storage-explorer"
 cask "microsoft-teams"
-cask "mongodb-compass-community"
+cask "robo-3t"
 cask "osxfuse"
 cask "parallels"
 cask "paw"
@@ -91,12 +91,14 @@ cask "wireshark"
 cask "adoptopenjdk"
 cask "notion"
 cask "obs"
+cask "transmission"
+cask "dbeaver-community"
 
 # Applications (mac app store)
 mas "1Password 7", id: 1333542190
 mas "Adblock Plus", id: 1432731683
-mas "Brother iPrint&Scan", id: 1193539993
 mas "Developer", id: 640199958
+mas "djay Pro", id: 1302002064
 mas "F5Access", id: 1243219105
 mas "feedly", id: 865500966
 mas "GarageBand", id: 682658836
@@ -110,10 +112,22 @@ mas "Microsoft Remote Desktop", id: 1295203466
 mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Remote Desktop", id: 409907375
 mas "Telegram", id: 747648890
+mas "The Unarchiver", id: 425424353
 mas "Unsplash Wallpapers", id: 1284863847
 mas "WebSocket Client", id: 1399498094
 mas "WhatsApp", id: 1147396723
 mas "WiFi Explorer Lite", id: 1408727408
-mas "Xcode", id: 497799835
+
+# Personal computer
+# cask "backblaze"
+# cask "cleanmymac"
+# cask "musicbrainz-picard"
+# cask "splice"
+# cask "goodsync"
+# mas "DaVinci Resolve", id: 571213070
+# mas "Mimeo Photos", id: 1282504627
+
+# Work computer
+# mas "Brother iPrint&Scan", id: 1193539993
+# mas "Xcode", id: 497799835
