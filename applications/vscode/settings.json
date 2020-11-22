@@ -125,5 +125,5 @@
     
     },
     "python.defaultInterpreterPath": "/usr/local/bin/python3",
-    "python.languageServer": "Microsoft",
+    "python.languageServer": "Pylance",
 }
