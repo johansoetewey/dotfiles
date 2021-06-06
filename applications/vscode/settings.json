@@ -32,7 +32,6 @@
     },
     "terminal.integrated.fontFamily": "RobotoMono Nerd Font",
     "terminal.integrated.fontSize": 14,
-    "window.zoomLevel": 0,
     "workbench.startupEditor": "welcomePageInEmptyWorkbench",
     "peacock.favoriteColors": [
         {
@@ -100,7 +99,7 @@
     "spotify.showMuteUnmuteVolumeButton": false,
     "todo-tree.highlights.enabled": true,
     "yaml.schemas": {
-        "file:///Users/jsoetewey/.vscode/extensions/atlassian.atlascode-2.8.4/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///Users/jsoetewey/.vscode/extensions/atlassian.atlascode-2.8.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "atlascode.jira.jqlList": [
         {
@@ -112,8 +111,8 @@
             "monitor": true
         }
     ],
-    "atlascode.jira.enabled": true,
-    "atlascode.bitbucket.enabled": true,
+    "atlascode.jira.enabled": false,
+    "atlascode.bitbucket.enabled": false,
     "atlascode.bitbucket.statusbar.showUser": false,
     "atlascode.bitbucket.statusbar.showProduct": false,
     "atlascode.bitbucket.statusbar.enabled": false,
@@ -126,4 +125,19 @@
     },
     "python.defaultInterpreterPath": "/usr/local/bin/python3",
     "python.languageServer": "Pylance",
+    "mssql.connections": [
+        {
+            "server": "{{put-server-name-here}}",
+            "database": "{{put-database-name-here}}",
+            "user": "{{put-username-here}}",
+            "password": "{{put-password-here}}"
+        }
+    ],
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "editor.formatOnSave": true,
 }
