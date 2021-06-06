@@ -93,6 +93,7 @@ cask "notion"
 cask "obs"
 cask "transmission"
 cask "dbeaver-community"
+cask "redisinsight"
 
 # Applications (mac app store)
 mas "1Password 7", id: 1333542190
