@@ -50,6 +50,8 @@ brew "azure/functions/azure-functions-core-tools"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/vault"
 brew "romkatv/powerlevel10k/powerlevel10k"
+brew "openssl@1.1"
+brew "python@3.8"
 
 # Applications (through cask)
 cask "ableton-live-suite"
@@ -68,7 +70,6 @@ cask "iterm2"
 cask "keycastr"
 cask "microsoft-azure-storage-explorer"
 cask "microsoft-teams"
-cask "robo-3t"
 cask "osxfuse"
 cask "parallels"
 cask "paw"
@@ -94,6 +95,7 @@ cask "obs"
 cask "transmission"
 cask "dbeaver-community"
 cask "redisinsight"
+cask "tunnelblick"
 
 # Applications (mac app store)
 mas "1Password 7", id: 1333542190
@@ -122,10 +124,10 @@ mas "WiFi Explorer Lite", id: 1408727408
 
 # Personal computer
 # cask "backblaze"
-# cask "cleanmymac"
 # cask "musicbrainz-picard"
 # cask "splice"
 # cask "goodsync"
+# cask "discord"
 # mas "DaVinci Resolve", id: 571213070
 # mas "Mimeo Photos", id: 1282504627
 
