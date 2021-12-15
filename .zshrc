@@ -96,6 +96,7 @@ alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias grep='grep --color=auto'
 alias brewski='brew update && brew upgrade && brew cask upgrade && brew cleanup; brew doctor'
 alias countryroads='cd ~'
+alias awsume=". awsume"
 
 cheat() {
   # Ask cheat.sh website for details about a Linux command.
@@ -103,7 +104,7 @@ cheat() {
 }
 
 # Add Directories to PATH
-export PATH="$PATH:$HOME/bin:$HOME/.rvm/bin:/usr/local/opt/ncurses/bin:/usr/local/sbin"
+export PATH="$PATH:$HOME/bin:$HOME/.rvm/bin:/usr/local/opt/ncurses/bin:/usr/local/sbin:$HOME/.local/bin"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"

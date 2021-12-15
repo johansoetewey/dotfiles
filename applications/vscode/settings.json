@@ -99,7 +99,7 @@
     "spotify.showMuteUnmuteVolumeButton": false,
     "todo-tree.highlights.enabled": true,
     "yaml.schemas": {
-        "file:///Users/jsoetewey/.vscode/extensions/atlassian.atlascode-2.8.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///Users/jsoetewey/.vscode/extensions/atlassian.atlascode-2.10.0/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "atlascode.jira.jqlList": [
         {
@@ -133,11 +133,20 @@
             "password": "{{put-password-here}}"
         }
     ],
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "editor.formatOnSave": true,
+    "redhat.telemetry.enabled": true,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "csharp.suppressDotnetInstallWarning": true,
 }

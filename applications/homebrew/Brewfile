@@ -79,8 +79,6 @@ cask "puppetlabs/puppet/puppet-bolt"
 cask "slack"
 cask "sourcetree"
 cask "spotify"
-cask "steam"
-cask "steamcmd"
 cask "teamviewer"
 cask "thunderbird"
 cask "vagrant"
@@ -96,21 +94,18 @@ cask "transmission"
 cask "dbeaver-community"
 cask "redisinsight"
 cask "tunnelblick"
+cask "zoom"
 
 # Applications (mac app store)
 mas "1Password 7", id: 1333542190
 mas "Adblock Plus", id: 1432731683
 mas "Developer", id: 640199958
-mas "djay Pro", id: 1302002064
+mas "djay", id: 450527929
 mas "F5Access", id: 1243219105
 mas "feedly", id: 865500966
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
-mas "Messenger", id: 1480068668
 mas "Microsoft Excel", id: 462058435
-mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
@@ -130,7 +125,3 @@ mas "WiFi Explorer Lite", id: 1408727408
 # cask "discord"
 # mas "DaVinci Resolve", id: 571213070
 # mas "Mimeo Photos", id: 1282504627
-
-# Work computer
-# mas "Brother iPrint&Scan", id: 1193539993
-# mas "Xcode", id: 497799835
