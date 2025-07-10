@@ -5,11 +5,17 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Import Powerlevel10k theme
+source $(brew --prefix powerlevel10k)/share/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$PATH:$HOME/.bin:$HOME/.scripts:$HOME/.rvm/bin:/usr/local/opt/ncurses/bin:/usr/local/sbin:$HOME/.local/bin:$HOME/.rd/bin"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/jsoetewey/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -21,7 +27,7 @@ ZSH_THEME="mh"
 DISABLE_AUTO_TITLE="true"
 
 # Default username to hide "user@hostname" info
-DEFAULT_USER="jsoetewey"
+DEFAULT_USER="johan.soetewey"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -51,7 +57,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  sudo git history zsh-autosuggestions docker jira osx zsh-syntax-highlighting pip python django
+  sudo git history zsh-autosuggestions docker jira macos zsh-syntax-highlighting pip python
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -80,44 +86,125 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-# Aliases
-alias python='python3'
 alias zshconfig="code $HOME/.zshrc"
 alias ohmyzsh="code $HOME/.oh-my-zsh"
-alias fp-build="$HOME/Git/fp-build/fp-build-nix"
-alias docker-clean="docker image prune -f && docker container prune -f"
-alias git-clean="git branch --merged | egrep -v '(^\*|master|develop|stable)' | xargs git branch -d"
 alias ls='ls -G -F'
 alias wget='wget -c'
 alias top='htop'
+alias monitor='bpytop'
 alias cat='bat'
 alias c="clear"
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias grep='grep --color=auto'
-alias brewski='brew update && brew upgrade && brew cask upgrade && brew cleanup; brew doctor'
+alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
 alias countryroads='cd ~'
 alias awsume=". awsume"
+alias uuid='python -c "import uuid; print(uuid.uuid4())"'
+alias cd="z"
 
+# Ask cheat.sh website for details about a Linux command.
 cheat() {
-  # Ask cheat.sh website for details about a Linux command.
   curl -m 10 "http://cheat.sh/${1}" 2>/dev/null || printf '%s\n' "[ERROR] Something broke"
 }
 
-# Add Directories to PATH
-export PATH="$PATH:$HOME/bin:$HOME/.rvm/bin:/usr/local/opt/ncurses/bin:/usr/local/sbin:$HOME/.local/bin"
+# Uppercase any text
+upper() {
+  python -c "print('${1}'.upper())"
+}
 
-# NVM
+# Convert svg to png
+svg2png() {
+    svgFile=$1;
+    width=$2;
+
+    if [[ -z `file ${svgFile} | grep 'Scalable Vector Graphics image'` ]]; then
+        echo "file ${svgFile} type is not SVG";
+        return 1;
+    fi
+
+    echo "file ${svgFile} type is SVG";
+
+    if [[ -z ${width} ]]; then
+        echo "width not specified, using width=1024 as default";
+        width=1024;
+    fi
+
+    pngFile="$(echo ${svgFile} | sed "s/\.[s,S][v,V][g,G]/\.png/")";
+
+    inkscape --export-type png --export-filename ${pngFile} -w ${width} ${svgFile};
+}
+
+gitignore() {
+  curl -sL https://www.toptal.com/developers/gitignore/api/$@;
+}
+
+# NVM - manage node versions
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+[ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh"
+[ -s "$(brew --prefix nvm)/etc/bash_completion" ] && . "$(brew --prefix nvm)/etc/bash_completion"
 
-source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+# PyEnv - manage python versions
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
-# Variables
-JIRA_URL="https://jira.flowpilots.com"
-
+# ZSH autocomplete - enable bash auto complete
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/vault vault
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Switch kubernetes contexts
+source $(brew --prefix switch)/switch.sh
+
+# ---- Zoxide (better cd) ----
+eval "$(zoxide init zsh)"
+
+# FZF 
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
+
+show_file_or_dir_preview="if [ -d {} ]; then tree {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+
+# -- Use fd instead of fzf --
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview' --bind 'enter:become(code {})'"
+export FZF_ALT_C_OPTS="--preview 'tree {} | head -200'"
+
+# Use fd (https://github.com/sharkdp/fd) for listing path candidates.
+# - The first argument to the function ($1) is the base path to start traversal
+# - See the source code (completion.{bash,zsh}) for the details.
+_fzf_compgen_path() {
+  fd --hidden --exclude .git . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fd --type=d --hidden --exclude .git . "$1"
+}
+
+# Advanced customization of fzf options via _fzf_comprun function
+# - The first argument to the function is the name of the command.
+# - You should make sure to pass the rest of the arguments to fzf.
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf --preview 'tree -C {} | head -200' "$@" ;;
+    export|unset) fzf --preview "eval 'echo $'{}"         "$@" ;;
+    ssh)          fzf --preview 'dig {}'                   "$@" ;;
+    *)            fzf --preview "bat -n --color=always --line-range :500 {}" "$@" ;;
+  esac
+}
+
+source ~/fzf-git.sh/fzf-git.sh
+
+# --- setup fzf theme ---
+fg="#dcdcdc"
+bg_highlight="#262626"
+green="#58c18f"
+white="#ffffff"
+red="#FF5C57"
+yellow="#ffea00"
+
+export FZF_DEFAULT_OPTS="--no-bold --color=fg:${fg},hl:${yellow},fg+:${fg},bg+:${bg_highlight},hl+:${green},info:${green},prompt:${green},pointer:${green},marker:${green},spinner:${green},header:${fg}"

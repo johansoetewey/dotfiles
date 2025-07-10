@@ -1,0 +1,45 @@
+[core]
+	excludesfile = /Users/johan.soetewey/.gitignore_global
+	pager = delta
+    #editor = vscode
+[init]
+	defaultBranch = main
+[merge]
+    tool = vscode
+[mergetool "vscode"]s
+    cmd = code --wait $MERGED
+[diff]
+    tool = vscode
+	colorMoved = default
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[commit]
+	template = /Users/johan.soetewey/.stCommitMsg
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	a = add --all
+    rbc = rebase --continue
+	rbi = rebase --interactive
+    st = status
+    logg = log --graph --decorate --oneline --all
+    cm = commit
+    df = diff
+    dfs = diff --staged
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Johan Soetewey
+	email = johan.soetewey@gmail.com
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    side-by-side = true
+[interactive]
+    diffFilter = delta --color-only
